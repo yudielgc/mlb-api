@@ -5,7 +5,7 @@
         https = require('https'),
         router = express.Router();
 
-    var ACCESS_TOKEN = '2c04e5ad-e90f-4b82-939f-ec34f5d25e72',
+    var ACCESS_TOKEN = '',
         USER_AGENT = 'mybot/0.1 (https://erikberg.com/)',
         TIME_ZONE = 'America/New_York';
 
