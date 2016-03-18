@@ -1,5 +1,5 @@
 (function () {
-    'use strict';
+    //'use strict';
 
     var express = require('express'),
         https = require('https'),
