@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,6 +9,16 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var samples = require('./routes/samples');
+var players = require('./routes/players');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/mlbApp', function (err) {
+    if (err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});
 
 var app = express();
 
@@ -24,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/samples', samples);
+app.use('/players', players);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
