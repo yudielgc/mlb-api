@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var samples = require('./routes/samples');
-var players = require('./routes/players');
+var apiPlayers = require('./routes/api/players');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/mlbApp', function (err) {
@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/samples', samples);
-app.use('/players', players);
+app.use('/api/players', apiPlayers);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
