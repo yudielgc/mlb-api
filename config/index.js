@@ -7,11 +7,11 @@
             port: 3000
         },
         staging: {
-            mode: 'local',
+            mode: 'staging',
             port: 4000
         },
         production: {
-            mode: 'local',
+            mode: 'production',
             port: 5000
         }
     };
