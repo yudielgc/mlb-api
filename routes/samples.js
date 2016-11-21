@@ -5,8 +5,8 @@
         https = require('https'),
         router = express.Router(),
         nodeCache = require('node-cache'),
-        util = require('util'),
-        zlib = require('zlib');
+        util = require('util');
+        //zopfli = require('zopfli');
 
     var config = {
             'access_token': '3086dabc-4e0e-4467-9369-d562071cf4ce',
@@ -182,7 +182,7 @@
             hostname: xmlstatsUrl.host,
             path: url,
             headers: {
-                'Accept-Encoding': 'gzip',
+                //'Accept-Encoding': 'gzip',
                 'Authorization': authorization,
                 'User-Agent': userAgent
             }
@@ -192,13 +192,14 @@
             var content;
             var data = [];
 
-            if (res.headers['content-encoding'] === 'gzip') {
-                var gzip = zlib.createGunzip();
+            /*if (res.headers['content-encoding'] === 'gzip') {
+                var gzip = zopfli.createGzip()();
                 res.pipe(gzip);
                 content = gzip;
             } else {
                 content = res;
-            }
+            }*/
+            content = res;
 
             content.on('data', function (chunk) {
                 data.push(chunk);

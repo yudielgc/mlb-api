@@ -17,8 +17,7 @@
     "node-cache": "^4.1.0",
     "serve-favicon": "~2.3.0",
     "sprintf": "^0.1.5",
-    "util": "^0.10.3",
-    "zlib": "^1.0.5"
+    "util": "^0.10.3"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5",
