@@ -23,5 +23,8 @@
   "devDependencies": {
     "jasmine-node": "^1.14.5",
     "nodemon": "^1.9.1"
+  },
+  "engines": {
+    "node": "4.4.7"
   }
 }
