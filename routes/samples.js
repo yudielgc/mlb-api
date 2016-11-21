@@ -40,13 +40,11 @@
     router.get('/roster-json', function (req, res) {
         var obj = require('./players.json');
 
-        console.log('obj', obj);
         res.json(obj);
     });
 
     /* GET roster. */
     router.get('/roster/:team', function(req, res, next) {
-        console.log('req.params', req.params, req.params.team);
         xmlstatsUrl.endpoint = 'roster';
         xmlstatsUrl.id = req.params.team;
         var url = buildUrl(xmlstatsUrl);

@@ -46,7 +46,9 @@
             $.each(data.players, function() {
                 tableContent += '<tr>';
                 tableContent += '<th scope="row">' + this.uniform_number + '</th>';
-                tableContent += '<td>' + this.first_name + ' ' + this.last_name + '</td>';
+                tableContent +=
+                    '<td><a href="https://www.google.com/search?q=' + this.first_name + '+' +  + this.last_name + '" target="_blank">' +
+                    this.first_name + ' ' + this.last_name + '</a></td>';
                 tableContent += '<td>' + this.team + '</td>';
                 tableContent += '<td>' + this.birthdate + '</td>';
                 tableContent += '<td>' + this.height_in + '</td>';
@@ -75,7 +77,9 @@
             $.each(data, function() {
                 tableContent += '<tr>';
                 tableContent += '<th scope="row">' + this.uniform_number + '</th>';
-                tableContent += '<td>' + this.first_name + ' ' + this.last_name + '</td>';
+                tableContent +=
+                    '<td><a href="https://www.google.com/search?q=' + this.first_name + '+' + this.last_name + '" target="_blank">' +
+                    this.first_name + ' ' + this.last_name + '</a></td>';
                 tableContent += '<td>' + this.team + '</td>';
                 tableContent += '<td>' + this.birthdate + '</td>';
                 tableContent += '<td>' + this.height_in + '</td>';
