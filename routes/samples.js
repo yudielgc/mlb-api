@@ -9,7 +9,7 @@
         //zopfli = require('zopfli');
 
     var config = {
-            'access_token': '3086dabc-4e0e-4467-9369-d562071cf4ce',
+            'access_token': '',
             'user_agent_contact': 'yudielgc@gmail.com',
             'time_zone': 'America/New_York',
             'version': '1.0'
