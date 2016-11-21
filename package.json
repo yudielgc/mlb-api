@@ -14,8 +14,11 @@
     "moment-timezone": "^0.5.0",
     "mongoose": "^4.4.8",
     "morgan": "~1.6.1",
+    "node-cache": "^4.1.0",
     "serve-favicon": "~2.3.0",
-    "sprintf": "^0.1.5"
+    "sprintf": "^0.1.5",
+    "util": "^0.10.3",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5",

@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="page-header">
-        <h1 id="tables"><%= title %></h1>
+        <h1 id="tables">
+            <%= title %>
+        </h1>
     </div>
 
     <div class="container">
@@ -19,8 +21,14 @@
         </div>
 
         <div class="row">
+            <select id="teams-list">
+                <options value="None">Select a Team</options>
+            </select>
+        </div>
+
+        <div class="row">
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="roster-content">
                     <thead>
                         <tr>
                             <th>No.</th>
@@ -29,8 +37,9 @@
                             <th>DOB</th>
                             <th>H</th>
                             <th>W</th>
-                            <th>Pitch</th>
-                            <th>Bat</th>
+                            <th>Position</th>
+                            <th>Bats</th>
+                            <th>Throws</th>
                             <th>Status</th>
                         </tr>
                     </thead>
@@ -45,28 +54,7 @@
                             <td>@mdo</td>
                             <td>Mark</td>
                             <td>Otto</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
+                            <td>Otto</td>
                         </tr>
                     </tbody>
                 </table>
@@ -77,6 +65,8 @@
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="/javascripts/global.js"></script>
 
 </body>
 </html>
