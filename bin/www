@@ -14,7 +14,10 @@ var config = require('../config')();
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(config.port || process.env.PORT || '3000');
+//var port = normalizePort(config.port || process.env.PORT || '3000');
+// For publishing to Heroku, as Heroku assigns a port dynamically
+// by adding it to the env variables
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
