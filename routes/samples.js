@@ -38,9 +38,15 @@
 
     /* GET roster from JSON file */
     router.get('/roster-json', function (req, res) {
-        var obj = require('./players.json');
+        var players = require('./players.json');
 
-        res.json(obj);
+        res.json(players);
+    });
+
+    router.get('/roster-json/:team', function (req, res) {
+        var players = require('./players.json');
+
+        res.json(players.filter(function (player) { return player.team.toLowerCase() === req.params.team.toLowerCase(); }));
     });
 
     /* GET roster. */
