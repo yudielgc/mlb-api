@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var samples = require('./routes/samples');
 var apiPlayers = require('./routes/api/players');
+var apiTeams = require('./routes/api/teams');
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.CUBANSMLBDB_URI, function (err) {
@@ -37,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/samples', samples);
 app.use('/api/players', apiPlayers);
+app.use('/api/teams', apiTeams);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
