@@ -4,22 +4,22 @@
     var express = require('express');
     var router = express.Router();
 
-    //var mongoose = require('mongoose');
-    var Player = require('../../models/Player.js');
+    var Players = require('../../models/Player.js');
 
     /* GET /players listing. */
     router.get('/', function(req, res, next) {
-        Player.find(function (err, players) {
+        Players.find(function (err, players) {
             if (err) {
                 return next(err);
             }
+
             res.json(players);
         });
     });
 
     /* POST /players */
     router.post('/', function(req, res, next) {
-        Player.create(req.body, function (err, post) {
+        Players.create(req.body, function (err, post) {
             if (err) {
                 return next(err);
             }
@@ -30,7 +30,7 @@
 
     /* GET /players/id */
     router.get('/:id', function(req, res, next) {
-        Player.findById(req.params.id, function (err, post) {
+        Players.findById(req.params.id, function (err, post) {
             if (err) {
                 return next(err);
             }
@@ -41,7 +41,7 @@
 
     /* PUT /players/:id */
     router.put('/:id', function(req, res, next) {
-        Player.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+        Players.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
             if (err) {
                 return next(err);
             }
@@ -52,7 +52,7 @@
 
     /* DELETE /players/:id */
     router.delete('/:id', function(req, res, next) {
-        Player.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+        Players.findByIdAndRemove(req.params.id, req.body, function (err, post) {
             if (err) {
                 return next(err);
             }
