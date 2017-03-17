@@ -11,15 +11,14 @@ var routes = require('./routes/index');
 var samples = require('./routes/samples');
 var apiPlayers = require('./routes/api/players');
 
-// Mongoose off
-/*var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/mlbApp', function (err) {
+var mongoose = require('mongoose');
+mongoose.connect(process.env.CUBANSMLBDB_URI, function (err) {
     if (err) {
         console.log('connection error', err);
     } else {
         console.log('connection successful');
     }
-});*/
+});
 
 var app = express();
 
